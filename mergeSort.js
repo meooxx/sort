@@ -3,12 +3,17 @@
 // 将 数组分成俩个部分
 // 分别依次取值 与另外一个相比， 存入小的。 从小的那个数组下一个值与大的比较
 //[1,3,2]
-//[1], [3,2]
+
+
+// [1], [3,2]
 // [1], [3], [2]
-//[1], [2,3] 1<2 
-//[1, 2, 3]
+//[1], merge([3], [2])
+// merge([1], [2,3])
 
-
+// merge(a, b)
+// while iL, iR = 0, iL < leftLength && iR < rightLength
+//a[il] < b[iR] push a[il++]
+//else push b[iR++]
 
 
 const merge = (leftArray, rightArray) => {
