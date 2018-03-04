@@ -10,9 +10,8 @@ const arr = [1,4,3,2, 1 ]
 //1,1, [3], [2], [4]
 // 1,1,[2], [3],[4]
 
-
-
-
+//先定位 左边的值 及 while i <= j , 找到 > pivot 的index 与右边 < pivot 左边交换，再移动一个位置
+// 通过指定， left， 与right 索引实现 对arr 分组
 
 const swap = (arr, a, b) => {
     
@@ -51,7 +50,7 @@ const quickSort = (arr, left, right) => {
   const index = partition(arr, left, right)
 
   if( left < index - 1 ) {
-    quickSort(arr, left, index-1)
+    quickSort(arr, left, index-1) 
   }
   if(right > index) {
     quickSort(arr, index, right)
