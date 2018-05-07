@@ -2,7 +2,7 @@
 
 
 
-const arr = [1,4,3,2, 1 ]
+const arr = [1,3,5,2,0 ]
 
 
 
@@ -24,12 +24,13 @@ const swap = (arr, a, b) => {
 
 const partition = (arr, left, right) => {
   const pivot = Math.floor((left + right)/2)
+  pivotValue = arr[pivot]
   while(left <= right) {
-    while( arr[left] < arr[pivot]) {
+    while( arr[left] < pivotValue) {
       // arr[left] < pivot
       left++ 
     }
-    while( arr[right] > arr[pivot]) {
+    while( arr[right] > pivotValue) {
       // arr[left] < pivot
       right--
     }
@@ -39,8 +40,9 @@ const partition = (arr, left, right) => {
       left++
       right--
     }
-    return left
   }
+  return left
+
 }
 
 
