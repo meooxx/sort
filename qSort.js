@@ -15,10 +15,10 @@ const arr = [1,4,3,2, 1 ]
 
 const swap = (arr, a, b) => {
     
-    const t = arr[a]
-    arr[a] = arr[b]
-    arr[b] = t
-    return arr
+  const t = arr[a]
+  arr[a] = arr[b]
+  arr[b] = t
+  return arr
 
 }
 
